@@ -1,0 +1,19 @@
+#form-container {
+    width: 40%;
+}
+
+#logo {
+    width: 30vw;
+}
+
+input.form-control{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+label{
+    font-weight: 500 !important;
+}
+.cp{
+    cursor: pointer;
+}
