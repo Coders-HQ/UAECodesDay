@@ -2,9 +2,11 @@
   "name": "uaecodesday",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server",
+    "dev": "nodemon server/server"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/Coders-HQ/UAECodesDay/issues"
   },
-  "homepage": "https://github.com/Coders-HQ/UAECodesDay#readme"
+  "homepage": "https://github.com/Coders-HQ/UAECodesDay#readme",
+  "dependencies": {
+    "@fastify/postgres": "^5.1.0",
+    "@fastify/static": "^6.5.0",
+    "@fastify/swagger": "^8.1.0",
+    "@fastify/swagger-ui": "^1.1.0",
+    "fastify": "^4.9.2",
+    "pg": "^8.8.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
