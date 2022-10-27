@@ -2,7 +2,7 @@ import Fastify from 'fastify'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUi from '@fastify/swagger-ui'
 
-import postsRoutes from './routes/posts.js'
+import { postsRoutes } from './routes/posts.js'
 
 
 const PORT = 5000;
@@ -18,15 +18,28 @@ await fastify.register(fastifySwagger, {
 		description: "UAE Codes API",
 		version: "0.1"
 	},
+	schemes: ['http', 'https'],
 	uiConfig: {
-		docExpansion: 'full',
-		deepLinking: false
+		docExpansion: 'none',
+		deepLinking: false,
 	},
-	uiHooks: {
-		onRequest: function (request, reply, next) { next() },
-		preHandler: function (request, reply, next) { next() }
-	},
+	tags: [
+		{ name: 'posts', description: 'primary end-point' },
+	],
+	// uiHooks: {
+	// 	onRequest: function (request, reply, next) { next() },
+	// 	preHandler: function (request, reply, next) { next() }
+	// },
+	consumes: ['application/json'],
+	produces: ['application/json'],
 	staticCSP: true,
+	securityDefinitions: {
+		apiKey: {
+			type: 'apiKey',
+			name: 'apiKey',
+			in: 'header'
+		}
+	},
 	transformStaticCSP: (header) => header,
 });
 
