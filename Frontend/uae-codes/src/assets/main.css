@@ -31,9 +31,6 @@ label {
 }
 
 @media only screen and (max-width: 1200px) {
-  #app {
-    background: yellow;
-  }
   #logo {
     width: 35vw;
   }
@@ -48,7 +45,6 @@ label {
     min-height: -webkit-fill-available;
   }
   #app {
-    background: blue;
     height: -webkit-fill-available;
     min-height: 100vh;
   }
@@ -61,11 +57,8 @@ label {
 }
 
 @media only screen and (max-width: 660px) {
-  #app {
-    background: red;
-  }
   html {
-    font-size: 0.96rem;
+    font-size: 0.95rem;
   }
   #logo {
     width: 75vw;
