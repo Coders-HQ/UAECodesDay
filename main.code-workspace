@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "./database",
+			"name": "DB"
+		},
+		{
+			"path": "./shared",
+			"name": "Shared"
+		},
+		{
+			"path": "./Frontend",
+			"name": "App"
+		},
+		{
+			"path": "./server",
+			"name": "Server"
+		},
+		{
+			"path": "./",
+			"name": "Root"
+		}
+	],
+	"settings": {
+		"conventionalCommits.scopes": [
+			"server"
+		]
+	}
+}
